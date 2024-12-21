@@ -14,7 +14,7 @@ namespace eclipse::hacks::Bypass {
             tab->addToggle("bypass.moderatorbypass")->handleKeybinds()->setDescription();
         }
 
-        [[nodiscard]] const char* getId() const override { return "Menu Gameplay"; }
+        [[nodiscard]] const char* getId() const override { return "Moderator Bypass"; }
     };
 
     REGISTER_HACK(MenuGameplay)
