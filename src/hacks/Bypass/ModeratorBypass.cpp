@@ -11,7 +11,7 @@ namespace eclipse::hacks::Bypass {
         void init() override {
             auto tab = gui::MenuTab::find("tab.bypass");
 
-            tab->addToggle("bypass.menugameplay")->handleKeybinds()->setDescription();
+            tab->addToggle("bypass.moderatorbypass")->handleKeybinds()->setDescription();
         }
 
         [[nodiscard]] const char* getId() const override { return "Menu Gameplay"; }
@@ -20,7 +20,7 @@ namespace eclipse::hacks::Bypass {
     REGISTER_HACK(MenuGameplay)
 
     class $modify(MenuGameplayMGLHook, MenuGameLayer) {
-        ALL_DELEGATES_AND_SAFE_PRIO("bypass.menugameplay")
+        ALL_DELEGATES_AND_SAFE_PRIO("bypass.moderatorbypass")
 
         void tryJump(float) { /* Disable auto-play */ }
 
